@@ -4,7 +4,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
     if (context.url.pathname.includes("about")) {
         console.log(`Request for ${context.url.pathname}`);
-        return context.rewrite(new Request("/blog"));
+        return context.rewrite("/blog");
     }
 
     return next();
