@@ -7,6 +7,15 @@ export const GET: APIRoute = async ({ params, request }) => {
 
     const { slug } = params;
 
+    if (typeof slug !== 'string') {
+        return new Response(
+            JSON.stringify({ msg: `Invalid slug` }),
+            {
+                status: 400,
+                headers: { "Content-Type": "application/json" }
+            });
+    }
+
     const post = await getEntry("blog", slug);
 
     if (!post) {
