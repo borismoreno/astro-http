@@ -4,7 +4,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
     if (context.url.pathname === "/about") {
         console.log(`Request for ${context.url.pathname}`);
-        return context.rewrite("/about/index.html");
+        return context.rewrite("https://main.d19bcy9plmh0zh.amplifyapp.com/about/index.html");
     }
 
     return next();
