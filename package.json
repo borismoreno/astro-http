@@ -17,12 +17,6 @@
         "@libsql/client": "^0.14.0",
         "astro": "^5.1.1",
         "astro-aws-amplify": "^0.1.0",
-        "canvas-confetti": "^1.9.3",
-        "lodash.debounce": "^4.0.8",
         "vue": "^3.5.13"
-    },
-    "devDependencies": {
-        "@types/canvas-confetti": "^1.9.0",
-        "@types/lodash.debounce": "^4.0.9"
     }
 }

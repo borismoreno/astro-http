@@ -16,9 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue';
-import confetti from 'canvas-confetti';
-import debounce from 'lodash.debounce';
+import { ref } from 'vue';
 import { actions } from 'astro:actions';
 
 
@@ -35,15 +33,6 @@ const isLoading = ref(true);
 const likePost = async () => {
     likeCount.value++;
     likeCliks.value++;
-
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { 
-            x: Math.random(),
-            y: Math.random() - 0.2 
-        }
-    });
 }
 
 const getCurrentLikes = async () => {
