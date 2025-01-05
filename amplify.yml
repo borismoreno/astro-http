@@ -8,6 +8,7 @@ frontend:
       commands:
         - env >> .env
         - npm run build
+        - rm -rf node_modules/canvas
         - mv node_modules ./.amplify-hosting/compute/default
         - mv .env ./.amplify-hosting/compute/default/.env
   artifacts:
